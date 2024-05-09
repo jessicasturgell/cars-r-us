@@ -1,9 +1,11 @@
+import { interiorSeatOptions } from "./interior.js"
 import { paintColorOptions } from "./paint.js"
 
 const container = document.querySelector("#container")
 
 const render = async () => {
     const paintColorOptionsHTML = await paintColorOptions()
+    const interiorSeatOptionsHTML = await interiorSeatOptions()
     const composedHTML = `
     <h1>Cars-R-Us</h1>
     <article class="choices">
@@ -13,6 +15,7 @@ const render = async () => {
     </section>
     <section class="choices_interior options">
     <h2>Interior</h2>
+    ${interiorSeatOptionsHTML}
     </section>
     <section class="choices_technology options">
     <h2>Technology</h2>
