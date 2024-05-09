@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+h1 {
+    font-family: "Nabla";
+    font-size: 72px;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: rgb(255, 247, 206);
+    padding: 1rem;
+    background-color: darkslateblue;
+    border-radius: 10px;
+    border: 3px solid darkblue;
+}
+
+body {
+    background-color: rgb(178, 74, 74);
+    margin: 0 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(52, 0, 0);
+}
+
+hr {
+    color: darkred;
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    font-family: "Roboto", sans-serif;
+}
+
+#save-submission {
+    background-color: darkblue;
+    color: aliceblue;
+    padding: 5px;
+}

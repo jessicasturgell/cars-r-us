@@ -115,6 +115,13 @@
       "technologyId": "1",
       "wheelId": "4",
       "id": 4
+    },
+    {
+      "paintId": "4",
+      "interiorId": "4",
+      "technologyId": "4",
+      "wheelId": "4",
+      "id": 5
     }
   ]
 }
