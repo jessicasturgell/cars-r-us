@@ -1,8 +1,12 @@
+import { setTechnologyId } from "./transientState.js"
+
 export const technologyOptions = async () => {
-    const response = await fetch("http://localhost:8088/technology")
+    const response = await fetch("http://localhost:8088/technologies")
     const technology = await response.json()
+
+    document.addEventListener("change", changeHandler)
     
-    let technologyOptionsHTML = `<div><select id="resource"><option value="0">Select Technology Package</option>`
+    let technologyOptionsHTML = `<select id="tech"><option value="0">Select Technology Package</option>`
     const divStringArray = technology.map(
         (tech) => {
             return `<option value="${tech.id}">${tech.package}</option>`
@@ -10,7 +14,14 @@ export const technologyOptions = async () => {
     )
     
     technologyOptionsHTML += divStringArray.join("")
-    technologyOptionsHTML += `</select></div>`
+    technologyOptionsHTML += `</select>`
 
     return technologyOptionsHTML   
 }
+
+const changeHandler = (changeEvent) => {
+    if (changeEvent.target.id === "tech") {
+       const chosenOption = changeEvent.target.value
+       setTechnologyId(chosenOption)
+    }
+ }
