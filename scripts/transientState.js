@@ -20,8 +20,8 @@ export const setTechnologyId = (chosenLocation) => {
     console.log(transientState)
 }
 
-export const setWheelsId = (chosenLocation) => {
-    transientState.wheelsId = chosenLocation
+export const setWheelId = (chosenLocation) => {
+    transientState.wheelId = chosenLocation
     console.log(transientState)
 }
 

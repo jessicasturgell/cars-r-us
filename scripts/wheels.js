@@ -1,4 +1,4 @@
-import { setWheelsId } from "./transientState.js"
+import { setWheelId } from "./transientState.js"
 
 export const wheelOptions = async () => {
     const response = await fetch("http://localhost:8088/wheels")
@@ -22,6 +22,6 @@ export const wheelOptions = async () => {
 const changeHandler = (changeEvent) => {
     if (changeEvent.target.id === "wheels") {
        const chosenOption = changeEvent.target.value
-       setWheelsId(chosenOption)
+       setWheelId(chosenOption)
     }
  }
