@@ -2,7 +2,8 @@ const transientState = {
     "paintId": 0,
     "interiorId": 0,
     "technologyId": 0,
-    "wheelId": 0
+    "wheelId": 0,
+    "modelId": 0
 }
 
 export const setPaintId = (chosenLocation) => {
@@ -22,6 +23,10 @@ export const setTechnologyId = (chosenLocation) => {
 
 export const setWheelId = (chosenLocation) => {
     transientState.wheelId = chosenLocation
+    console.log(transientState)
+}
+export const setModelId = (chosenLocation) => {
+    transientState.modelId = chosenLocation
     console.log(transientState)
 }
 

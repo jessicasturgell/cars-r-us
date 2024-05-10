@@ -1,4 +1,5 @@
 import { interiorSeatOptions } from "./interior.js"
+import { modelOptions } from "./models.js"
 import { orders } from "./orders.js"
 import { paintColorOptions } from "./paint.js"
 import { saveOrder } from "./saveSubmission.js"
@@ -14,6 +15,7 @@ const render = async () => {
     const wheelOptionsHTML = await wheelOptions()
     const buttonHTML = await saveOrder()
     const ordersHTML = await orders()
+    const modelOptionsHTML = await modelOptions()
 
     const composedHTML = `
     <h1>Cars-R-Us</h1>
@@ -33,6 +35,10 @@ const render = async () => {
         <section class="choices_wheel options">
             <h2>Wheels</h2>
             ${wheelOptionsHTML}
+        </section>
+        <section class="choices_model options">
+            <h2>Vehicle Models</h2>
+            ${modelOptionsHTML}
         </section>
     </article>
     <article class="order">
